@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.background {
+  background-image: radial-gradient(#ffffff 2.5px, transparent 2.5px), radial-gradient(#ffffff 2.5px, transparent 2.5px);
+  background-size: 36px 36px;
+  background-position: 0 0, 18px 18px;
+  background-color: #b1d2ff;
+}
+
+   .spinner {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      animation: spinner-plncf9 4s infinite;
+   }
+   
+   .spinner::before,
+   .spinner::after {
+      content: "";
+      grid-area: 1/1;
+      border: 9px solid;
+      border-radius: 50%;
+      border-color: #474bff #474bff #0000 #0000;
+      mix-blend-mode: darken;
+      animation: spinner-plncf9 1s infinite linear;
+   }
+   
+   .spinner::after {
+      border-color: #0000 #0000 #dbdcef #dbdcef;
+      animation-direction: reverse;
+   }
+   
+   @keyframes spinner-plncf9 {
+      100% {
+         transform: rotate(1turn);
+      }
+   }
+
+@keyframes spinner-z355kx {
+   to {
+      transform: rotate(360deg);
+   }
+}
